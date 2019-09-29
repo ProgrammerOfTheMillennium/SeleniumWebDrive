@@ -29,6 +29,10 @@ public class Youtube
         FirefoxDriver driver = new FirefoxDriver(firefoxOptions);
         driver.get("https://youtube.com");
 
+
+        WebElement video = driver.findElement(By.cssSelector("div > #contents #img"));
+        video.click();
+
         Thread.sleep(5000);
 
         driver.close();
