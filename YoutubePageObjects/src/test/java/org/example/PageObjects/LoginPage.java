@@ -3,8 +3,9 @@ package org.example.PageObjects;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.LoadableComponent;
 
-public class LoginPage extends PageObject {
+public class LoginPage extends PageObject /* LoadableComponent<LoginPage> */ {
     private WebDriver driver;
 
     @FindBy(id="")
@@ -17,7 +18,7 @@ public class LoginPage extends PageObject {
     private WebElement button;
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
 
         driver.get("https://");
     }

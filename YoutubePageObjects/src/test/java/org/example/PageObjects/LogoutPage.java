@@ -11,9 +11,7 @@ public class LogoutPage extends PageObject {
     private WebElement button;
 
     public LogoutPage(WebDriver driver) {
-        this.driver = driver;
-
-        driver.get("https://");
+        super(driver);
     }
 
     public void logout() {
